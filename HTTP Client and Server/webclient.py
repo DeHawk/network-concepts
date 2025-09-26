@@ -1,7 +1,7 @@
 import socket
 import sys
 
-def get_http_response(host, port=80, path="/"):
+def get_http_response(host, port=28333, path="/"):
     
     with socket.socket() as skt:
         skt.connect((host, port))
@@ -25,7 +25,7 @@ def get_http_response(host, port=80, path="/"):
 
 if __name__ == "__main__":
     if len(sys.argv)< 2:
-        print("Usage: python HttpClient.py <hostname> [path]")
+        print("Usage: python webclient.py <hostname> [path]")
         sys.exit(1)
         
     host = sys.argv[1]
